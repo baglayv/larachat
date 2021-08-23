@@ -20,7 +20,7 @@ class MessageController extends Controller
 
         $chat_id = $this->chatId($userHostId, Auth::id());
         
-        echo "chat_id: $chat_id";
+        
     
         $messages = $chat_id ? Message::where('chat_id', $chat_id)->get() : [];
         $user = User::findOrFail($userHostId);
