@@ -17,7 +17,9 @@ class MessageController extends Controller
     public function showListChat($userHostId)
     {
         
-
+         $validate = $request->validate([
+            'message' => 'required|max:255',
+           ]);
         $chat_id = $this->chatId($userHostId, Auth::id());
         
         
