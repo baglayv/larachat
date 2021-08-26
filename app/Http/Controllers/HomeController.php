@@ -32,9 +32,7 @@ class HomeController extends Controller
         $usersList = User::where('id', '!=',$userAuthId)->get();
         
         return view('home', compact('usersList', 'userAuthId'));
-        //return view('home', compact('userCurrentId'));
-        //dd($userCurrentId);
-        //dd($usersList);
+        
     }
 
 
